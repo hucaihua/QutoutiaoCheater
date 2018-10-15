@@ -1,7 +1,7 @@
 import os
 
-SCREEN_WIDTH = 1200
-SCREEN_LENGTH = 1920
+SCREEN_WIDTH = 480
+SCREEN_LENGTH = 854
 DIFF = 10
 
 class AndroidDubugBrideCmd(object):
@@ -45,10 +45,18 @@ class AndroidDubugBrideCmd(object):
         """make key event"""
 
         # adb shell input keyevent key
-        cmd = "adb shell input keyevent" \
+        cmd = "adb shell input keyevent " \
             + str(key)
 
         print("cmd: ", cmd)
         os.system(cmd)
 
+    def back(self):
+        """make key event"""
 
+        # adb shell input keyevent key
+        cmd = "adb shell input keyevent 4" \
+            + str(key)
+
+        print("cmd: ", cmd)
+        os.system(cmd)
