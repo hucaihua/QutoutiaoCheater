@@ -16,7 +16,7 @@ class AndroidDubugBrideCmd(object):
                 + str(start_xy[0]) + " " \
                 + str(start_xy[1]) + " " \
                 + str(end_xy[0]) + " " \
-                + str(end_xy[1]) + " "
+                + str(end_xy[1]) + "  100"
         else:
             cmd = "adb shell input swipe " \
                 + str(start_xy[0]) + " " \
@@ -55,8 +55,7 @@ class AndroidDubugBrideCmd(object):
         """make key event"""
 
         # adb shell input keyevent key
-        cmd = "adb shell input keyevent 4" \
-            + str(key)
+        cmd = "adb shell input keyevent 4"
 
-        print("cmd: ", cmd)
+        print("back: ", cmd)
         os.system(cmd)
